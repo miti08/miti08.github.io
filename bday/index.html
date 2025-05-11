@@ -2,12 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="card">
-    <h1 id="greeting">🎉 Happy Birthday! 🎂</h1>
-    <button id="reveal">Click to Celebrate</button>
+
+  <div id="gift-container">
+    <img id="gift-box" src="assets/images/gift-0.png" alt="Click to open gift">
   </div>
+
+  <div id="card-content">
+    <h1>Happy Birthday! 🎉</h1>
+    <p>Wishing you a day filled with love, laughter, and all your favorite things!</p>
+    <!-- add more styling or images here -->
+  </div>
+
+  <!-- Audio elements -->
+  <audio id="bg-music" src="assets/audio/music.mp3" loop preload="auto"></audio>
+  <audio id="click-sound" src="assets/audio/click.wav" preload="auto"></audio>
+  <audio id="open-sound" src="assets/audio/open.wav" preload="auto"></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
