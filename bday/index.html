@@ -2,27 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Happy Birthday!</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <script defer src="script2.js"></script>
 </head>
 <body>
+  <img id="gift" src="assets/images/gift-0.png" alt="Gift Box">
 
-  <div id="gift-container">
-    <img id="gift-box" src="assets/images/gift-0.png" alt="Click to open gift">
+  <div id="card">
+    <img id="blank-card" src="assets/images/slice1.png" alt="Birthday Card">
+    <img
+    id="corner-gif"
+    src="assets/images/junimo4.gif"
+    alt="">
+    <img
+    id="corner-gif2"
+    src="assets/images/junimo4.gif"
+    alt="">
+    <img
+    id="us-gif"
+    src="assets/images/us.gif"
+    alt="">
+
+    <div id="card-text" data-text="Happy Birthday, Han! Wishing you a year full of joy and adventure!"></div>
+
   </div>
 
-  <div id="card-content">
-    <h1>Happy Birthday! 🎉</h1>
-    <p>Wishing you a day filled with love, laughter, and all your favorite things!</p>
-    <!-- add more styling or images here -->
-  </div>
-
-  <!-- Audio elements -->
-  <audio id="bg-music" src="assets/audio/music.mp3" loop preload="auto"></audio>
-  <audio id="click-sound" src="assets/audio/click.wav" preload="auto"></audio>
-  <audio id="open-sound" src="assets/audio/open.wav" preload="auto"></audio>
-
-  <script src="script.js"></script>
+  <!-- audio elements -->
+  <audio id="click-sound" src="assets/audio/click.mp3" preload="auto"></audio>
+  <audio id="open-sound" src="assets/audio/open.mp3" preload="auto"></audio>
+  <audio id="bg-music"   src="assets/audio/bg-music.mp3" preload="auto" loop></audio>
 </body>
 </html>

@@ -1,0 +1,134 @@
+/* css/style.css */
+@font-face {
+  font-family: 'StardewValley';
+  src: url('assets/fonts/Stardew_Valley.ttf') format('truetype');
+  font-style: normal;
+}
+/* body now has a full-page background */
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  /* new background image */
+  background-image: url('assets/images/background.png');
+  background-size: cover;           /* makes it fill the screen */
+  background-position: center;      /* centers the focal point */
+  background-repeat: no-repeat;     /* prevents tiling */
+  /* fallback background color while image loads */
+  background-color: #fdf6e3;
+  font-family: 'StardewValley', normal;
+}
+
+/* clickable image styling */
+img {
+  cursor: pointer;
+  /* prevent images from ever growing beyond the viewport */
+  max-width: 95vw;    /* at most 95% of the viewport width */
+  max-height: 95vh;   /* at most 95% of the viewport height */
+  width: auto;        /* natural width, scaled down by max-* if needed */
+  height: auto;       /* natural height, scaled down by max-* if needed */
+  display: block;
+  margin: auto;       /* center in case it’s smaller than the viewport */
+}
+
+#card img {
+  cursor: default;
+}
+
+#gift {
+  width: 300px;
+  transition: opacity 1s ease-out;
+}
+#gift.fade-out {
+  opacity: 0;
+}
+
+/* override only the card’s cursor */
+#card {
+  display: none;
+  cursor: default;
+  opacity: 0;
+  position: relative;                  /* start fully transparent */
+  transition: opacity 1.0s ease-in 0.5s;
+  max-width: 90vw;
+  max-height: 95vh;
+  margin: auto;
+  margin-top:0.05%;
+}
+#corner-gif {
+  position: absolute;
+  bottom: 4%;
+  right: 10%;      /* adjust to move left/right */
+  width: 15%;       /* scales with card width */
+  height: auto;
+  pointer-events: none; /* clicks pass through to underlying elements */
+  z-index: 2;       /* sits above the card image and text */
+}
+#corner-gif2 {
+  position: absolute;
+  bottom: 4%;
+  left: 10%;      /* adjust to move left/right */
+  width: 15%;       /* scales with card width */
+  height: auto;
+  pointer-events: none; /* clicks pass through to underlying elements */
+  z-index: 2;       /* sits above the card image and text */
+}
+
+#us-gif {
+  position: absolute;
+  bottom: 5%;
+  left: 37%;
+  width: 27%;      /* scales with card width */
+  height: auto;
+  pointer-events: none; /* clicks pass through to underlying elements */
+  z-index: 2;       /* sits above the card image and text */
+}
+
+#card.visible {
+  display: block;              /* make it participate in layout */
+  opacity: 1;                  /* fade up to fully opaque */
+}
+
+#blank-card {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+#card-text {
+  position: absolute;
+  /* tweak these to suit where the paper’s “writing area” is */
+  top: 30%;
+  left: 15%;
+  width: 70%;
+  font-size: 2vw;                /* scales with viewport size */
+  line-height: 1.2;
+  color: #333;
+  font-family: 'StardewValley';
+  overflow: hidden;              /* for the typewriter clipping */
+  white-space: nowrap;
+  border-right: .1em solid #333; /* the blinking cursor */
+  letter-spacing: .05em;
+  z-index: 1;
+}
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.pop {
+  animation: pop 200ms ease-out;
+}
+
+@keyframes glow {
+  0%   { filter: drop-shadow(0 0 0px gold); }
+  50%  { filter: drop-shadow(0 0 12px gold); }
+  100% { filter: drop-shadow(0 0 0px gold); }
+}
+.glow {
+  animation: glow 200ms ease;
+}
