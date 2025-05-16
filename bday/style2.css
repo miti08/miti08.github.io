@@ -121,7 +121,7 @@ img {
   100% { transform: scale(1); }
 }
 .pop {
-  animation: pop 200ms ease-out;
+  animation: pop 100ms ease-out;
 }
 
 @keyframes glow {
@@ -130,5 +130,5 @@ img {
   100% { filter: drop-shadow(0 0 0px gold); }
 }
 .glow {
-  animation: glow 200ms ease;
+  animation: glow 100ms ease;
 }
